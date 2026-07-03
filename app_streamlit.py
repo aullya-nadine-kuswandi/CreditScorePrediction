@@ -73,7 +73,7 @@ with tab2:
         delay_due = st.number_input("Delay from Due Date (days)", -30, 200, 15)
         num_delayed = st.number_input("Number of Delayed Payments", 0, 100, 10)
         credit_history = st.number_input("Credit History Age (months)", 0, 1000, 220)
-        credit_util = st.number_input("Credit Utilization Ratio (%)", 0, 100, 20, 0.01)
+        credit_util = st.number_input("Credit Utilization Ratio (%)", 0.0, 100.0, 20.0, step=0.1)
         credit_mix = st.selectbox("Credit Mix", ['Bad', 'Standard', 'Good'], index=1)
     with c2:
         changed_limit = st.number_input("Changed Credit Limit", min_value=-100.0, value=10.0, step=1.0)
