@@ -62,9 +62,9 @@ with tab1:
     with c2:
         num_card = st.number_input("Number of Credit Cards", 0, 50, 5)
         outstanding_debt = st.number_input("Outstanding Debt", min_value=0.0, value=1200.0, step=50.0)
-        total_emi = st.number_input("Total EMI per Month", min=0.0, value=100.0, step=10.0)
-        amount_invested = st.number_input("Amount Invested Monthly", min=0.0, value=200.0, step=10.0)
-        monthly_balance = st.number_input("Monthly Balance", min=0.0, value=400.0, step=10.0)
+        total_emi = st.number_input("Total EMI per Month", min_value=0.0, value=100.0, step=10.0)
+        amount_invested = st.number_input("Amount Invested Monthly", min_value=0.0, value=200.0, step=10.0)
+        monthly_balance = st.number_input("Monthly Balance", min_value=0.0, value=400.0, step=10.0)
 
 with tab2:
     c1, c2 = st.columns(2)
@@ -76,7 +76,7 @@ with tab2:
         credit_util = st.number_input("Credit Utilization Ratio (%)", 0, 100, 5)
         credit_mix = st.selectbox("Credit Mix", ['Bad', 'Standard', 'Good'], index=1)
     with c2:
-        changed_limit = st.number_input("Changed Credit Limit", min=-100.0, value=10.0, step=1.0)
+        changed_limit = st.number_input("Changed Credit Limit", min_value=-100.0, value=10.0, step=1.0)
         num_inquiries = st.number_input("Number of Credit Inquiries", 0, 100, 5)
         spent_level = st.radio("Spent Level", ['Low', 'High'], horizontal=True)
         payment_value = st.selectbox("Payment Value", ['Small', 'Medium', 'Large'])
