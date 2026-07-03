@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="Credit Score Prediction", layout="wide")
 
-MODEL_PATH = Path(__file__).parent / "artifacts" / "best_model.pkl"
+MODEL_PATH = "best_model.pkl"
 LABELS = {0: 'Poor', 1: 'Standard', 2: 'Good'}
 
 @st.cache_resource
