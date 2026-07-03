@@ -62,7 +62,7 @@ with tab1:
     with c2:
         num_card = st.number_input("Number of Credit Cards", 0, 50, 5)
         outstanding_debt = st.number_input("Outstanding Debt", min_value=0.0, value=1200.0, step=50.0)
-        total_emi = st.number_input("Total EMI per Month", min_value=0.0, value=100.0, step=10.0)
+        total_emi = st.number_input("Total EMI per Month", 0, 100000, 100.0, step=10.0)
         amount_invested = st.number_input("Amount Invested Monthly", min_value=0.0, value=200.0, step=10.0)
         monthly_balance = st.number_input("Monthly Balance", min_value=0.0, value=400.0, step=10.0)
 
